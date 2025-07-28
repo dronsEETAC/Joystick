@@ -5,8 +5,9 @@ La mayoría de las aplicaciones del Drone Engineering Ecosystem permiten control
 ## 2. Uso del Joystick via Mission Planner    
 Mission Planner permite controlar el dron usando un Joystick. Esta web y el vídeo muestra cómo hacerlo.    
    
-https://ardupilot.org/copter/docs/common-joystick.html
-https://www.youtube.com/watch?v=HYT_L5V1dA4
+https://ardupilot.org/copter/docs/common-joystick.html     
+      
+https://www.youtube.com/watch?v=HYT_L5V1dA4      
 
 De forma similar, la propia emisora de radio se puede conectar a Mission Planner en modo Joystick.    
 

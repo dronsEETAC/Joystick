@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Joystick App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, orientation=landscape">
+  <script src="https://cdn.jsdelivr.net/npm/nipplejs@0.9.0/dist/nipplejs.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      width: 100vw;
+      height: 100vh;
+      background-color: #000;
+    }
+    body {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+    #left, #right {
+      width: 50vw;
+      height: 100vh;
+      background: #1a1a1a;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #left { border-right: 2px solid #333; }
+    #right { border-left: 2px solid #333; }
+  </style>
+</head>
+<body>
+  <div id="left"></div>
+  <div id="right"></div>
+
+  <script>
+    const socket = io();
+    function createJoystick(zoneId, joyId) {
+      const manager = nipplejs.create({
+        zone: document.getElementById(zoneId),
+        mode: 'static',
+        position: { left: '50%', top: '50%' },
+        color: 'cyan',
+        size: Math.min(window.innerHeight, window.innerWidth) * 0.5
+      });
+
+      manager.on('move', function (_, data) {
+        const angle = data.angle ? data.angle.radian : 0;
+        const force = Math.min(data.force || 0, 1);
+        const px = (force * Math.cos(angle)).toFixed(2);
+        const py = (force * Math.sin(angle)).toFixed(2);
+        socket.emit('sendRC', JSON.stringify({ id: joyId, x:px, y:py }))
+
+      });
+
+      manager.on('end', function () {
+         socket.emit('sendRC', JSON.stringify({ id: joyId, x:0, y:0 }))
+
+      });
+    }
+
+    createJoystick("left", "left");
+    createJoystick("right", "right");
+  </script>
+
+<!-- Añadir justo antes de </body> -->
+<div id="controls">
+  <button onclick="sendCommand('sendTakeoff')">Despegar</button>
+  <button onclick="sendCommand('sendLand')">Aterrizar</button>
+</div>
+
+<script>
+  function sendCommand(command) {
+    socket.emit(command)
+  }
+</script>
+
+<style>
+  #controls {
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+  }
+  #controls button {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    margin: 0 1rem;
+    background: #0af;
+    border: none;
+    border-radius: 1rem;
+    color: white;
+    cursor: pointer;
+  }
+  #controls button:hover {
+    background: #08c;
+  }
+</style>
+
+</body>
+</html>

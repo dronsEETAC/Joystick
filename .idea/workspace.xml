@@ -5,31 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1edfe545-8966-4a2f-aff4-d3629c41014e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/RepoJoystick.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dron.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JoystickReal.py" beforeDir="false" afterPath="$PROJECT_DIR$/JoystickReal_old.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/dron_RC_overrride.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/dron_RTL_Land.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/dron_arm.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/dron_connect.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/dron_flightPlan.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/dron_goto.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/dron_localGeofence.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/dron_local_telemetry.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/dron_mission.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/dron_mov.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/dron_nav.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/dron_parameters.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/dron_setGeofence.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/dron_takeOff.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/dron_telemetry.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testJoystickReal.py" beforeDir="false" afterPath="$PROJECT_DIR$/testJoystickReal.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

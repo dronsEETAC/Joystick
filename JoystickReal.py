@@ -95,9 +95,11 @@ class Joystick:
         self.dron.send_rc(roll, pitch, throttle, yaw)
 
         if buttons[8] == 1:
+            print ('vamos a armar el dron ', self.id)
             self.dron.arm()
             print("Armado")
         if buttons[9] == 1:
+            print('vamos a despegar el dron ', self.id)
             self.dron.takeOff(5, blocking=False)
             print("Despegando")
 
